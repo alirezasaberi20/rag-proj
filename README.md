@@ -2,6 +2,8 @@
 
 A production-ready Retrieval-Augmented Generation (RAG) chatbot API built with FastAPI and local LLMs via Ollama. Designed for on-premise deployment with a focus on data privacy and security.
 
+![RAG Chatbot Screenshot](assets/screenshot.png)
+
 ## Features
 
 - **RAG Pipeline**: Full retrieval-augmented generation with document chunking, embedding, and context-aware responses
