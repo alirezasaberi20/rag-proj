@@ -1,0 +1,24 @@
+# Core Framework
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+
+# HTTP Client
+httpx>=0.26.0
+
+# Auth
+python-jose[cryptography]>=3.3.0
+
+# Embeddings
+sentence-transformers>=2.2.2
+
+# Utilities
+python-dotenv>=1.0.0
+python-multipart>=0.0.6
+
+# Document Processing
+pypdf>=3.17.0
+
+# UI (optional)
+streamlit>=1.30.0
