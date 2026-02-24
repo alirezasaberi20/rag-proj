@@ -68,12 +68,32 @@ cp .env.example .env
 
 ### Start Ollama
 
+**On Linux/macOS:**
 ```bash
-# Start Ollama server
 ollama serve
-
-# Pull a model (in another terminal)
 ollama pull tinyllama
+```
+
+**On Windows (or WSL accessing Windows Ollama):**
+
+If running Ollama on Windows and accessing from WSL, you need to bind to all interfaces:
+
+```powershell
+# PowerShell - set Ollama to listen on all interfaces
+$env:OLLAMA_HOST="0.0.0.0:11434"
+ollama serve
+```
+
+Then pull a model in another terminal:
+```powershell
+ollama pull tinyllama
+```
+
+**For WSL users:** Update `OLLAMA_BASE_URL` in `.env` to your Windows host IP:
+```bash
+# Find Windows IP from WSL
+ip route show default | awk '{print $3}'
+# Then update .env: OLLAMA_BASE_URL=http://<windows-ip>:11434
 ```
 
 ### Run the API
